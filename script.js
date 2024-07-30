@@ -1,23 +1,28 @@
-const caixaPrincipal= document.querySelector(".caixa-principal");
-const caixaPerguntas= document.querySelector(."caixa-perguntas");
-const caixaAlternativas= document.querySelector(."ciaxa-alternativas");
-const caixaResultado= document.querySelector(."caixa-resultado")
-const textoResultado= document.querySelector(."texto-resultado");
+const caixaPrincipal = document.querySelector(".caixa-principal");
+const caixaPerguntas = document.querySelector(".caixa-perguntas");
+const caixaAlternativas = document.querySelector(".caixa-alternativas");
+const caixaResultado = document.querySelector(".caixa-resultado");
+const textoResultado = document.querySelector(".texto-resultado");
 
-const perguntas=[
+const perguntas = [
   {
-    enunciado:"Você prefere comer"
+    enunciado:"Você prefere comer",
       alternativas:[
-  "pizza";
-"hamburguer";
-]
+        {
+       texto: "pizza",
+afirmação:"afirmação"
 },
 {
+  texto:"hamburguer",
+  afirmação:"afirmação"
+}
+]
+  },
+  {
     enunciado:"Qual o melhor lugar para comer?"
       alternativas:[
   "Em casa";
 "Na lanchonete/restaurante";
-]
 },
 {
     enunciado:"Qual o melhor refrigerante"
@@ -47,7 +52,7 @@ let perguntaAtual;
 let historiaFinal=" ";
 
 function mostraPergunta() {
-if(atual >= perguntas.lenght){
+if (atual >= perguntas.lenght) {
 mostraResultado();
 return;
 } 
@@ -65,16 +70,18 @@ function mostraAlternativas() {
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
+
 function respostaSelecionada(opcaoSelecionada){
-  const afirmacoes = opcaoSelecionada.afirmacoes;
-  historiaFinal += afirmacoes +"";
+  const afirmacoes = opcaoSelecionada.afirmação;
+  historiaFinal += afirmacoes + " ";
   atual++;
   mostraPergunta();
 }
 
-function mostraResultado(){
-  caixaPerguntas.textContent="";
+function mostraResultado() {
+  caixaPerguntas.textContent="em 2049";
+  textoresultado.textcontent = historiafinal;
+  caixaAlternativas.textContent = "";
 }
-
 
 mostraPergunta();
