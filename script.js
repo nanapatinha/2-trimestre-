@@ -21,31 +21,55 @@ afirmação:"afirmação"
   {
     enunciado:"Qual o melhor lugar para comer?"
       alternativas:[
-  "Em casa";
-"Na lanchonete/restaurante";
+    {
+       texto: "em casa",
+afirmação:"afirmação"
 },
+{
+  texto:"na lanchonete",
+  afirmação:"afirmação"
+}
+]
+  },
 {
     enunciado:"Qual o melhor refrigerante"
       alternativas:[
-  "Coca-cola";
-"Pepsi";
-]
+    {
+       texto: "coca-cola",
+afirmação:"afirmação"
 },
+{
+  texto:"pepsi",
+  afirmação:"afirmação"
+}
+]
+  },
 {
     enunciado:"Qual é o melhor"
       alternativas:[
-  "Nescau";
-"Toddy";
-]
+    {
+       texto: "nescau",
+afirmação:"afirmação"
 },
+{
+  texto:"toddy",
+  afirmação:"afirmação"
+}
+]
+  },
 {
     enunciado:"Você prefere comer "
       alternativas:[
-  "Legumes e verduraras";
-"Frituras e gosduras";
-]
+    {
+       texto: "frutas e verduras",
+afirmação:"afirmação"
 },
-];
+{
+  texto:"fritura e gorduras",
+  afirmação:"afirmação"
+}
+]
+  },
 
 let atual = 0;
 let perguntaAtual;
